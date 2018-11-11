@@ -293,5 +293,56 @@ void QuickSort(int arr[], int size)
 	__QuickSort(arr, 0, size-1);
 }
 
+//¶ÑÅÅÐò
+
+void AdjustDown(int arr[], int size, int root)
+{
+	while (1)
+	{
+		int left = root * 2 + 1;
+		int right = root * 2 + 2;
+
+		int max = left;
+		if (left >= size)
+		{
+			return;
+		}
+
+		if (right<size && arr[right]>arr[left])
+		{
+			max = right;
+		}
+
+		if (arr[root] < arr[max])
+		{
+			Swap(arr + root, arr + max);		
+		}
+		else
+		{
+			return;
+		}	
+		root = max;
+	}
+}
+
+void CreatHeap(int arr[], int size)
+{
+	for (int i = (size - 2) / 2; i >= 0; i--)
+	{
+		AdjustDown(arr, size, i);
+	}
+}
+
+void HeapSort(int arr[], int size)
+{
+	CreatHeap(arr, size);
+
+	for (int i = 0; i < size; i++)
+	{
+		Swap(&arr[0], &arr[size - 1 - i]);
+		AdjustDown(arr, size-1-i, 0);
+	}
+}
+//¹é²¢ÅÅÐò
 
 
