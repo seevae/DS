@@ -8,39 +8,39 @@ public interface SLInterface<E> {
     //头插
     void SListPushFront(SeqList<E> SL,Object data);
     //头删
-    void SListPopFront();
+    void SListPopFront(SeqList<E> SL);
     //尾插
-    void SListPushTail();
+    void SListPushTail(SeqList<E> SL,Object data);
     //尾删
-    void SListPopTail();
+    void SListPopTail(SeqList<E> SL);
     //在pos所在的下标做数据插入
-    void SListInsert();
+    void SListInsert(SeqList<E> SL,int pos, Object data);
     //删除pos所在下标的数据
-    void SListPop();
+    void SListErase(SeqList<E> SL, int pos);
 
     // 找从 0 开始的第一个，如果找到了，返回数据所在的下标
     // 如果没找到返回 -1
-    int SeqListFind();
+    int SeqListFind(SeqList<E> SL, Object data);
 
     // 删除第一个遇到的 data
-    void SeqListRemove();
+    void SeqListRemove(SeqList<E> SL, Object data);
 
     // 删除所有遇到的 data
-    void SeqListRemoveAll();
+    void SeqListRemoveAll(SeqList<E> SL, Object data);
 
     // 修改，pos 所在的下标
-    void SeqListModify();
+    void SeqListModify(SeqList<E> SL, int pos, Object data);
 
     // 打印
     void SeqListPrint(SeqList<E> SL);
 
-    // 内部接口
-    void CheckCapacity();
+    // 内部接口,判断是否需要进行扩容
+    void CheckCapacity(SeqList<E> SL);
 
     // 冒泡排序
-    void SeqListBubbleSort();
+    void SeqListBubbleSort(SeqList<E> SL);
 
     // 二分查找（前提是数据有序）
     // 如果找到，返回数据所在下标，如果没找到，返回 -1
-    int SeqListBinarySearch();
+    int SeqListBinarySearch(SeqList<E> SL, Object data);
 }

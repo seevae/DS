@@ -11,36 +11,52 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="SLInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SLInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+            <state relative-caret-position="57">
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeqList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SeqList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SeqList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="1083">
+              <caret line="256" column="5" lean-forward="true" selection-start-line="256" selection-start-column="5" selection-end-line="256" selection-end-column="5" />
               <folding>
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1562#1563#0" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="method#isEmpty#0;class#SeqList#0" />
+                <element signature="method#SListInit#0;class#SeqList#0" />
+                <element signature="method#SListDestroy#0;class#SeqList#0" />
+                <element signature="method#SListPushFront#0;class#SeqList#0" />
+                <element signature="method#SListPopFront#0;class#SeqList#0" />
+                <element signature="method#SListPushTail#0;class#SeqList#0" />
+                <element signature="method#SListPopTail#0;class#SeqList#0" />
+                <element signature="method#SListInsert#0;class#SeqList#0" />
+                <element signature="method#SListErase#0;class#SeqList#0" />
+                <element signature="method#SeqListFind#0;class#SeqList#0" />
+                <element signature="method#SeqListRemove#0;class#SeqList#0" />
+                <element signature="method#SeqListRemoveAll#0;class#SeqList#0" />
+                <element signature="method#SeqListModify#0;class#SeqList#0" />
+                <element signature="method#SeqListPrint#0;class#SeqList#0" />
+                <element signature="method#CheckCapacity#0;class#SeqList#0" />
+                <element signature="method#SeqListBubbleSort#0;class#SeqList#0" />
+                <element signature="method#SeqListBinarySearch#0;class#SeqList#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="551">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="method#code2#0;class#Test#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +76,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/io/github/seevae.java" />
         <option value="$PROJECT_DIR$/src/SLInterface.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/SeqList.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
   </component>
@@ -82,8 +98,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,6 +132,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,43 +219,45 @@
       <option name="presentableId" value="Default" />
       <updated>1545049431567</updated>
       <workItem from="1545049434498" duration="7536000" />
+      <workItem from="1545202987899" duration="5940000" />
+      <workItem from="1545209095427" duration="3493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7536000" />
+    <option name="totallyTimeSpent" value="16969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3296582" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3296582" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13385417" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,16 +267,52 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/io/github/seevae.java">
+    <entry file="file://$PROJECT_DIR$/src/SLInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="741">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeqList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
+          <folding>
+            <element signature="method#isEmpty#0;class#SeqList#0" />
+            <element signature="method#SListInit#0;class#SeqList#0" />
+            <element signature="method#SListDestroy#0;class#SeqList#0" />
+            <element signature="method#SListPushFront#0;class#SeqList#0" />
+            <element signature="method#SListPopFront#0;class#SeqList#0" />
+            <element signature="method#SListPushTail#0;class#SeqList#0" />
+            <element signature="method#SListPopTail#0;class#SeqList#0" />
+            <element signature="method#SListInsert#0;class#SeqList#0" />
+            <element signature="method#SListErase#0;class#SeqList#0" />
+            <element signature="method#SeqListFind#0;class#SeqList#0" />
+            <element signature="method#SeqListRemove#0;class#SeqList#0" />
+            <element signature="method#SeqListRemoveAll#0;class#SeqList#0" />
+            <element signature="method#SeqListModify#0;class#SeqList#0" />
+            <element signature="method#SeqListPrint#0;class#SeqList#0" />
+            <element signature="method#CheckCapacity#0;class#SeqList#0" />
+            <element signature="method#SeqListBubbleSort#0;class#SeqList#0" />
+            <element signature="method#SeqListBinarySearch#0;class#SeqList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="method#code2#0;class#Test#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SLInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="703">
           <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
@@ -275,10 +329,67 @@
         <state relative-caret-position="342">
           <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="method#isEmpty#0;class#SeqList#0" />
+            <element signature="method#SListInit#0;class#SeqList#0" />
+            <element signature="method#SListDestroy#0;class#SeqList#0" />
+            <element signature="method#SListPushFront#0;class#SeqList#0" />
+            <element signature="method#SListPopFront#0;class#SeqList#0" />
+            <element signature="method#SListPushTail#0;class#SeqList#0" />
+            <element signature="method#SListPopTail#0;class#SeqList#0" />
+            <element signature="method#SListInsert#0;class#SeqList#0" />
+            <element signature="method#SListErase#0;class#SeqList#0" />
+            <element signature="method#SeqListFind#0;class#SeqList#0" />
+            <element signature="method#SeqListRemove#0;class#SeqList#0" />
+            <element signature="method#SeqListRemoveAll#0;class#SeqList#0" />
+            <element signature="method#SeqListModify#0;class#SeqList#0" />
+            <element signature="method#SeqListPrint#0;class#SeqList#0" />
+            <element signature="method#CheckCapacity#0;class#SeqList#0" />
+            <element signature="method#SeqListBubbleSort#0;class#SeqList#0" />
+            <element signature="method#SeqListBinarySearch#0;class#SeqList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/seevae.java" />
+    <entry file="file://$PROJECT_DIR$/src/SLInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeqList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="256" column="5" lean-forward="true" selection-start-line="256" selection-start-column="5" selection-end-line="256" selection-end-column="5" />
+          <folding>
+            <element signature="method#isEmpty#0;class#SeqList#0" />
+            <element signature="method#SListInit#0;class#SeqList#0" />
+            <element signature="method#SListDestroy#0;class#SeqList#0" />
+            <element signature="method#SListPushFront#0;class#SeqList#0" />
+            <element signature="method#SListPopFront#0;class#SeqList#0" />
+            <element signature="method#SListPushTail#0;class#SeqList#0" />
+            <element signature="method#SListPopTail#0;class#SeqList#0" />
+            <element signature="method#SListInsert#0;class#SeqList#0" />
+            <element signature="method#SListErase#0;class#SeqList#0" />
+            <element signature="method#SeqListFind#0;class#SeqList#0" />
+            <element signature="method#SeqListRemove#0;class#SeqList#0" />
+            <element signature="method#SeqListRemoveAll#0;class#SeqList#0" />
+            <element signature="method#SeqListModify#0;class#SeqList#0" />
+            <element signature="method#SeqListPrint#0;class#SeqList#0" />
+            <element signature="method#CheckCapacity#0;class#SeqList#0" />
+            <element signature="method#SeqListBubbleSort#0;class#SeqList#0" />
+            <element signature="method#SeqListBinarySearch#0;class#SeqList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="method#code2#0;class#Test#0" />
           </folding>
         </state>
       </provider>
