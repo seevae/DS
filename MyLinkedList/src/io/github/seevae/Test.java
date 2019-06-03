@@ -22,7 +22,7 @@ public class Test {
         sList.PrintSeqList(sList);
     }
 
-    public static void main(String[] args){
+    public static void code2(){
         SList<Integer> sList = new SList<>();
         sList.InitSeqList();
         sList.PushBackSeqList(3);
@@ -34,5 +34,17 @@ public class Test {
         sList.PushBackSeqList(3);
         sList.RemoveSeqList(3);
         sList.PrintSeqList(sList);
+    }
+
+    public static void main(String[] args){
+        SList<Integer> sList = new SList<>();
+        sList.InitSeqList();
+        sList.PushBackSeqList(1);
+        sList.PushBackSeqList(2);
+        sList.PushBackSeqList(3);
+        sList.PushBackSeqList(4);
+        sList.PushBackSeqList(5);
+        sList.PrintSeqList(sList);
+        sList.ReverseList(sList);
     }
 }

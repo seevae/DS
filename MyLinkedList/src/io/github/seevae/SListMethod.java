@@ -37,4 +37,7 @@ public interface SListMethod<E> {
 
     //打印
     void PrintSeqList(SList<E> sList);
+
+    //反转链表
+    void ReverseList(SList<E> sList);
 }
