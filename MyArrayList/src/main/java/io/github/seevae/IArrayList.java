@@ -1,20 +1,26 @@
-public interface SLInterface<E> {
+package io.github.seevae;/*
+    name zhang;
+    */
+
+public interface IArrayList<E> {
     //是否为空
     boolean isEmpty(SeqList<E> SL);
     //初始化
-    void SListInit(SeqList<E> SL,int cap);
-    //销魂
+    void SListInit(SeqList<E> SL, int cap);
+    //销毁
     void SListDestroy(SeqList<E> SL);
+    //当前顺序表长度
+    int SListLength(SeqList<E> SL);
     //头插
-    void SListPushFront(SeqList<E> SL,Object data);
+    void SListPushFront(SeqList<E> SL, Object data);
     //头删
     void SListPopFront(SeqList<E> SL);
     //尾插
-    void SListPushTail(SeqList<E> SL,Object data);
+    void SListPushTail(SeqList<E> SL, Object data);
     //尾删
     void SListPopTail(SeqList<E> SL);
     //在pos所在的下标做数据插入
-    void SListInsert(SeqList<E> SL,int pos, Object data);
+    void SListInsert(SeqList<E> SL, int pos, Object data);
     //删除pos所在下标的数据
     void SListErase(SeqList<E> SL, int pos);
 
