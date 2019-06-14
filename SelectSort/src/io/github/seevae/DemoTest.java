@@ -2,7 +2,7 @@ package io.github.seevae;
 
 /**
  * 选择排序
- * 
+ *
  */
 
 public class DemoTest {
