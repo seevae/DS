@@ -311,6 +311,45 @@ public class MySingleListImpl implements ILinked{
         return resultHead;
     }
 
+    //以给定值x为基准将链表分割为两部分,所有小于x的节点排在大于或等于x的节点之前
+    public Node partition(int x){
+        Node beforeStart = null;
+        Node beforeEnd = null;
+        Node afterStart = null;
+        Node afterEnd = null;
+        Node cur = this.head;
+
+        while(cur !=null){
+            Node curNext = cur.next;
+            cur.next = null;
+            if(cur.date<x){
+                if(beforeStart == null){
+                    beforeStart = cur;
+                    beforeEnd = beforeStart;
+                }else {
+                    beforeEnd.next = cur;
+                    beforeEnd = cur;
+                }
+            }else
+                {
+                if(afterStart == null){
+                    afterStart = cur;
+                    afterEnd = afterStart;
+                }else {
+                    afterEnd.next = cur;
+                    afterEnd = cur;
+                }
+            }
+            cur = curNext;
+        }
+
+        if(beforeStart == null){
+            return afterStart;
+        }
+
+        beforeEnd.next = afterStart;
+        return beforeStart;
+    }
 
 
 }
