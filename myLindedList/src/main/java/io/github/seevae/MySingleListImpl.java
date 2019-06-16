@@ -252,4 +252,65 @@ public class MySingleListImpl implements ILinked{
         return cur2;
     }
 
+    //将两个有序链表合并为一个新的有序链表并返回。(oj上完成)
+    private Node mergeTwoLists(Node l1, Node l2) {
+        if(l1==null){
+            return l2;
+        }
+
+        if(l2==null){
+            return l1;
+        }
+
+        if(l1==null & l2==null){
+            return null;
+        }
+
+        Node minNode = null;
+        Node cur1 = l1;
+        Node cur2 = l2;
+        Node resultHead = null;
+        Node tailNode = null;
+
+        while(cur1 != null && cur2!= null){
+            if(cur1.date<=cur2.date){
+                minNode = cur1;
+                cur1 = cur1.next;
+
+                if(resultHead == null){
+                    resultHead = minNode;
+                }else{
+                    tailNode.next = minNode;
+                }
+
+                minNode.next = null;
+                tailNode = minNode;
+
+            }else{
+                minNode = cur2;
+                cur2 = cur2.next;
+
+                if(resultHead == null){
+                    resultHead = minNode;
+                }else{
+                    tailNode.next = minNode;
+                }
+
+                minNode.next = null;
+                tailNode = minNode;
+            }
+        }
+
+        if(cur1 != null){
+            tailNode.next = cur1;
+        }
+
+        if(cur2 != null){
+            tailNode.next = cur2;
+        }
+        return resultHead;
+    }
+
+
+
 }
