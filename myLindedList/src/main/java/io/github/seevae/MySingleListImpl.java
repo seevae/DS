@@ -155,7 +155,6 @@ public class MySingleListImpl implements ILinked{
         if(this.head.date == key){
             this.head = this.head.next;
         }
-
     }
 
     public int getLength() {
@@ -183,4 +182,39 @@ public class MySingleListImpl implements ILinked{
             this.head = cur;
         }
     }
+
+    //链表练习题
+
+    //反转单链表并返回新的头节点
+    public Node reverseList() {
+        //最终返回的新链表的头
+        Node newHead = null;
+        //记录当前节点
+        Node cur = this.head;
+        //当前节点的上一个节点
+        Node pre = null;
+       while(cur != null){
+           Node curNext = cur.next;
+           if(curNext == null){
+               newHead = cur;
+           }
+           cur.next = pre;
+           pre = cur;
+           cur = curNext;
+       }
+       return newHead;
+    }
+
+    //打印链表从当前指定的节点开始
+    public void show(Node node){
+        Node cur = node;
+        while(cur != null){
+            System.out.print(cur.date+" ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
+
+
 }
