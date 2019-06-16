@@ -215,6 +215,23 @@ public class MySingleListImpl implements ILinked{
         System.out.println();
     }
 
+    //返回链表的中间节点,如果有两个中间节点就返回第二个
+    public Node midNode(){
+        Node cur = this.head;
+        Node cur2 = this.head;
+        int count = 0;
+        while(cur != null){
+            cur = cur.next;
+            count++;
+        }
+        int end = count/2+1;
+        for(int i=0;i<end-1;i++){
+            cur2 = cur2.next;
+        }
+        System.out.println(cur2.date);
+        return cur2;
+    }
+
 
 
 }

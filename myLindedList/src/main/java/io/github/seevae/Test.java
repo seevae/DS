@@ -9,13 +9,15 @@ public class Test {
 //        mySingleList.addFirst(2);
 //        mySingleList.addFirst(3);
 
-        mySingleList.addLast(2);
-        mySingleList.addLast(2);
+        mySingleList.addLast(1);
         mySingleList.addLast(2);
         mySingleList.addLast(3);
         mySingleList.addLast(4);
-        mySingleList.addLast(2);
         mySingleList.addLast(5);
+        mySingleList.addLast(6);
+        mySingleList.addLast(7);
+        mySingleList.addLast(8);
+
 
 //
 //        mySingleList.addIndex(0,4);
@@ -45,7 +47,9 @@ public class Test {
 //        MySingleListImpl.Node newHead = mySingleList.reverseList();
 //        mySingleList.show(newHead);
 
-        mySingleList.removeAllKey(2);
-        mySingleList.display();
+//        mySingleList.removeAllKey(2);
+//        mySingleList.display();
+            mySingleList.midNode();
+
     }
 }
