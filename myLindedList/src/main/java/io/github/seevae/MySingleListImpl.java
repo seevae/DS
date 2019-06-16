@@ -232,6 +232,24 @@ public class MySingleListImpl implements ILinked{
         return cur2;
     }
 
+    //输入一个链表，输出该链表中倒数第k个结点
+    public Node backWardsNode(int k){
+        if(this.head == null ||k<0 ||k>this.getLength()){
+            return null;
+        }
+        Node cur1 = this.head;
+        Node cur2 = this.head;
 
+        for(int i=0;i<k-1;i++){
+            cur1 = cur1.next;
+        }
+
+        while(cur1.next != null){
+            cur1 = cur1.next;
+            cur2 = cur2.next;
+        }
+        System.out.println(cur2.date);
+        return cur2;
+    }
 
 }

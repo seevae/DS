@@ -49,7 +49,7 @@ public class Test {
 
 //        mySingleList.removeAllKey(2);
 //        mySingleList.display();
-            mySingleList.midNode();
-
+ //           mySingleList.midNode();
+            mySingleList.backWardsNode(3);
     }
 }
