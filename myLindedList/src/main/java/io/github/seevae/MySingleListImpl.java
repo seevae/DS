@@ -256,61 +256,28 @@ public class MySingleListImpl implements ILinked{
 
     //将两个有序链表合并为一个新的有序链表并返回。(oj上完成)
     private Node mergeTwoLists(Node l1, Node l2) {
-        if(l1==null){
-            return l2;
-        }
-
-        if(l2==null){
-            return l1;
-        }
-
-        if(l1==null & l2==null){
-            return null;
-        }
-
-        Node minNode = null;
-        Node cur1 = l1;
-        Node cur2 = l2;
-        Node resultHead = null;
-        Node tailNode = null;
-
-        while(cur1 != null && cur2!= null){
-            if(cur1.date<=cur2.date){
-                minNode = cur1;
-                cur1 = cur1.next;
-
-                if(resultHead == null){
-                    resultHead = minNode;
-                }else{
-                    tailNode.next = minNode;
-                }
-
-                minNode.next = null;
-                tailNode = minNode;
-
+        Node dummyHead = new Node(0);
+        Node cur = dummyHead;
+        while(l1 != null && l2 != null){
+            if(l1.date < l2.date){
+                cur.next = l1;
+                cur = cur.next;
+                l1 = l1.next;
             }else{
-                minNode = cur2;
-                cur2 = cur2.next;
-
-                if(resultHead == null){
-                    resultHead = minNode;
-                }else{
-                    tailNode.next = minNode;
-                }
-
-                minNode.next = null;
-                tailNode = minNode;
+                cur.next = l2;
+                cur = cur.next;
+                l2 = l2.next;
             }
         }
 
-        if(cur1 != null){
-            tailNode.next = cur1;
+        if(l1==null){
+            cur.next = l2;
+        }else{
+            cur.next = l1;
         }
 
-        if(cur2 != null){
-            tailNode.next = cur2;
-        }
-        return resultHead;
+        return dummyHead.next;
+
     }
 
     //以给定值x为基准将链表分割为两部分,所有小于x的节点排在大于或等于x的节点之前
@@ -354,7 +321,11 @@ public class MySingleListImpl implements ILinked{
     }
 
     //相交链表的交点 --> 解法一: 使用栈
-    private Node getIntersectionNode1(Node headA,Node headB){
+    private Node getIntersectionNode1(Node headA, Node headB) {
+        if(headA == null && headB ==null){
+            return null;
+        }
+
         Node cur1 = headA;
         Node cur2 = headB;
 
@@ -371,12 +342,11 @@ public class MySingleListImpl implements ILinked{
             cur2 = cur2.next;
         }
 
-        while(s1.peek() != s2.peek()){
-            s1.pop();
+        Node result = null;
+        while(!s1.empty() && !s2.empty() && s1.peek() == s2.peek()){
+            result = (Node)s1.pop();
             s2.pop();
         }
-
-        Node result = (Node)s1.pop();
         return result;
     }
 
