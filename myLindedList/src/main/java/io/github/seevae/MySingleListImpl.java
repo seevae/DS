@@ -442,4 +442,106 @@ public class MySingleListImpl implements ILinked{
         }
     }
 
+    //在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。
+    private Node deleteDuplication(Node pHead)
+    {
+        if(pHead == null){
+            return null;
+        }
+        Node head = new Node(-1);
+        head.next = pHead;
+        Node pre = head;
+        Node cur = head.next;
+
+        while(cur != null){
+            if(cur.next != null && cur.date == cur.next.date){
+                while(cur.next!=null && cur.date == cur.next.date){
+                    cur=cur.next;
+                }
+
+                pre.next = cur.next;
+                cur=cur.next;
+            }else{
+                pre = cur;
+                cur=cur.next;
+            }
+        }
+        return head.next;
+    }
+
+    //判断链表是否是回文链表
+    private boolean chkPalindrome(Node A) {
+        Node cur = A;
+        Node rHead = null;
+        Node tail = null;
+
+        while(cur!=null){
+            Node curNext = cur.next;
+            if(cur.next==null){
+                rHead=cur;
+            }
+            rHead = cur;
+            tail = cur;
+            cur = curNext;
+        }
+
+        Node cur1 = A;
+        while(rHead != null && cur1!=null){
+            if(rHead.date!=cur1.date){
+                return false;
+            }
+            rHead = rHead.next;
+            cur1 = cur1.next;
+        }
+        return true;
+    }
+
+    //判断链表是否带环
+    private boolean hasCycle(Node head) {
+        if(head == null){
+            return false;
+        }
+        Node fast = head;
+        Node slow = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    //求环的入口点
+    private Node detectCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+        boolean flag = false;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                flag = true;
+                break;
+            }
+        }
+
+        if(flag == false){
+            return null;
+        }
+
+        Node p1 = head;
+        while(p1 != slow){
+            p1 = p1.next;
+            slow = slow.next;
+        }
+        return p1;
+    }
+
+
+
 }

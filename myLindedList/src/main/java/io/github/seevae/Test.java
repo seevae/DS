@@ -10,11 +10,13 @@ public class Test {
 //        mySingleList.addFirst(3);
 
         mySingleList.addLast(2);
+        mySingleList.addLast(2);
+        mySingleList.addLast(2);
         mySingleList.addLast(5);
-        mySingleList.addLast(3);
+        mySingleList.addLast(4);
         mySingleList.addLast(4);
         mySingleList.addLast(1);
-        mySingleList.addLast(7);
+        mySingleList.addLast(6);
         mySingleList.addLast(6);
 
 //
@@ -52,6 +54,5 @@ public class Test {
 //           MySingleListImpl.Node node =  mySingleList.partition(4);
 //           mySingleList.show(node);
         mySingleList.printToTail();
-
     }
 }
