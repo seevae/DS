@@ -51,7 +51,7 @@ public class Test {
 //            mySingleList.backWardsNode(3);
 //           MySingleListImpl.Node node =  mySingleList.partition(4);
 //           mySingleList.show(node);
+        mySingleList.printToTail();
 
-           mySingleList.getIntersectionNode();
     }
 }

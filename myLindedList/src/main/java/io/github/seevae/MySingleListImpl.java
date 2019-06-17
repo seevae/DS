@@ -361,7 +361,7 @@ public class MySingleListImpl implements ILinked{
         return length;
     }
 
-    private Node getIntersectionNode(Node headA, Node headB) {
+    private Node getIntersectionNode2(Node headA, Node headB) {
         int length1 = getLength(headA);
         int length2 = getLength(headB);
         int gap = length1-length2;
@@ -388,5 +388,58 @@ public class MySingleListImpl implements ILinked{
         return resultNode;
     }
 
+    //逆序打印链表 使用栈
+    public void printToTail(){
+        Node cur = this.head;
+        Stack<Node> stack = new Stack<Node>();
+
+        while(cur != null){
+            stack.push(cur);
+            cur = cur.next;
+        }
+
+        while (!stack.empty()){
+            System.out.print(stack.pop().date+" ");
+        }
+
+        System.out.println();
+    }
+
+    //逆序打印链表,使用递归的方式
+    private void printTotail(Node head){
+        if(head!= null){
+            if(head.next != null){
+                printTotail(head.next);
+            }
+            System.out.println(head.date);
+        }
+    }
+
+    //删除链表中指定的节点 要求时间复杂度为O(1)
+    public void deleteNode(Node head,Node toBeDelete){
+        if(head ==null || toBeDelete==null){
+            return ;
+        }
+
+        //被删除元素在链表的中间位置不是尾节点
+        if(toBeDelete.next != null){
+            Node afterNode = toBeDelete.next;
+            toBeDelete.date = afterNode.date;
+            toBeDelete.next = afterNode.next;
+            afterNode.next = null;
+        }else if(head == toBeDelete){
+            //链表中只有要被删除的这一个节点
+            head = null;
+            toBeDelete = null;
+        }else{
+            Node cur = head;
+            //要删除的节点是尾节点时
+            while(cur.next != toBeDelete){
+                cur = cur.next;
+            }
+            cur.next = null;
+            toBeDelete.next = null;
+        }
+    }
 
 }
