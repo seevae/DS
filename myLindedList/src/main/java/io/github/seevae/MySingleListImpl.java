@@ -2,6 +2,8 @@ package io.github.seevae;/*
     name zhang;
     */
 
+import java.util.Stack;
+
 public class MySingleListImpl implements ILinked{
 
     class Node{
@@ -349,6 +351,71 @@ public class MySingleListImpl implements ILinked{
 
         beforeEnd.next = afterStart;
         return beforeStart;
+    }
+
+    //相交链表的交点 --> 解法一: 使用栈
+    private Node getIntersectionNode1(Node headA,Node headB){
+        Node cur1 = headA;
+        Node cur2 = headB;
+
+        Stack s1 = new Stack();
+        Stack s2 = new Stack();
+
+        while(cur1 != null){
+            s1.push(cur1);
+            cur1 = cur1.next;
+        }
+
+        while(cur2 != null){
+            s2.push(cur2);
+            cur2 = cur2.next;
+        }
+
+        while(s1.peek() != s2.peek()){
+            s1.pop();
+            s2.pop();
+        }
+
+        Node result = (Node)s1.pop();
+        return result;
+    }
+
+    //相交链表的交点 --> 解法二: 求出两条链表的长度差后用双指针
+    private int getLength(Node node){
+        Node cur = node;
+        int length = 0;
+        while(cur != null){
+            length++;
+            cur = cur.next;
+        }
+        return length;
+    }
+
+    private Node getIntersectionNode(Node headA, Node headB) {
+        int length1 = getLength(headA);
+        int length2 = getLength(headB);
+        int gap = length1-length2;
+
+        Node longCur = headA;
+        Node shortCur = headB;
+
+        if(length1 < length2){
+            longCur = headB;
+            shortCur = headA;
+            gap = length2 - length1;
+        }
+
+        for(int i=0;i<gap;i++){
+            longCur = longCur.next;
+        }
+
+        while(longCur != shortCur){
+            longCur = longCur.next;
+            shortCur = shortCur.next;
+        }
+
+        Node resultNode = longCur;
+        return resultNode;
     }
 
 

@@ -49,7 +49,9 @@ public class Test {
 //        mySingleList.display();
  //           mySingleList.midNode();
 //            mySingleList.backWardsNode(3);
-           MySingleListImpl.Node node =  mySingleList.partition(4);
-           mySingleList.show(node);
+//           MySingleListImpl.Node node =  mySingleList.partition(4);
+//           mySingleList.show(node);
+
+           mySingleList.getIntersectionNode();
     }
 }
