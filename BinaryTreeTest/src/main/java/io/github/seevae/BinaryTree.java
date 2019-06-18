@@ -63,5 +63,29 @@ public class BinaryTree {
         return root;
     }
 
+    // 结点个数
+    //思路:
+    //后序遍历:  左子树节点个数 + 右子树节点个数 + 根结点
+    int getSize(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+
+        return getSize(root.left) + getSize(root.right)+1;
+    }
+
+    // 叶子结点个数
+    int getLeafSize(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+
+        if(root.left == null && root.right==null){
+            return 1;
+        }
+
+        return getLeafSize(root.left)+getLeafSize(root.right);
+    }
+    
 
 }
