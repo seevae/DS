@@ -70,7 +70,14 @@ public class Heap implements IHeap {
     }
 
     public void HeapSort() {
-
+        int end = this.usedSize-1;
+        while(end>0){
+            int temp = this.elem[0];
+            this.elem[0] = this.elem[end];
+            this.elem[end] = temp;
+            AdjustDown(0,end);
+            end--;
+        }
     }
 
     public void show() {
