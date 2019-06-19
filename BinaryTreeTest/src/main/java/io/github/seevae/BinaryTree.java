@@ -2,6 +2,10 @@ package io.github.seevae;/*
     name zhang;
     */
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BinaryTree {
 
     class TreeNode{
@@ -135,5 +139,92 @@ public class BinaryTree {
         int rightHeigth = height(root.right);
         return leftHeigth>rightHeigth?leftHeigth+1:rightHeigth+1;
     }
+
+    //二叉树的前序遍历非递归
+    //难点: 外层循环
+    public void binaryTreePrevOrderNonR(TreeNode root){
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode cur = root;
+        TreeNode top = null;
+        while(cur != null || !stack.empty()){
+            while(cur != null){
+                stack.push(cur);
+                System.out.print(cur.value+" ");
+                cur = cur.left;
+            }
+            top = (TreeNode)stack.pop();
+            cur = top.right;
+        }
+        System.out.println();
+    }
+
+    //二叉树的中序遍历非递归
+    public void binaryTreeInOrderNonR(TreeNode root){
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode cur = root;
+        TreeNode top = null;
+
+        while(cur != null || !stack.empty()){
+            while(cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            top = stack.pop();
+            System.out.print(top.value+" ");
+            cur = top.right;
+        }
+        System.out.println();
+    }
+
+    //二叉树的后序遍历非递归
+    void binaryTreePostOrderNonR(TreeNode root){
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode cur = root;
+        TreeNode prev = null;
+
+        while(cur != null || !stack.empty()){
+
+            while(cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+
+            cur = stack.peek();
+            if(cur.right == null || cur.right == prev){
+                stack.pop();
+                System.out.print(cur.value+" ");
+                prev =cur;
+                cur = null;
+            }else{
+                cur = cur.right;
+            }
+        }
+    }
+
+    //二叉树的层序遍历
+    //思路: 使用队列
+    void binaryTreeLevelOrder(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
+        if(root != null){
+            queue.offer(root);
+
+        }
+
+        while(!queue.isEmpty()){
+            TreeNode top = queue.peek();
+            System.out.print(top.value+" ");
+            if(top.left != null){
+                queue.offer(top.left);
+            }
+
+            if(top.right != null){
+                queue.offer(top.right);
+            }
+            queue.poll();
+        }
+
+    }
+
 
 }
