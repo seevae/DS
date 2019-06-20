@@ -110,6 +110,12 @@ public class Heap implements IHeap {
         return elem[0];
     }
 
+
+    /**
+     * 时间复杂度: O(nlong2n)
+     * 空间复杂度: O(1)
+     * 稳定性: 不稳定
+     */
     public void HeapSort() {
         int end = this.usedSize-1;
         while(end>0){
@@ -127,4 +133,10 @@ public class Heap implements IHeap {
         }
         System.out.println();
     }
+
+    /**
+     * topK问题
+     */
+
+
 }
