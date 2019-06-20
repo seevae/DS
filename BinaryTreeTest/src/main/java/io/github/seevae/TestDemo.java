@@ -6,8 +6,9 @@ public class TestDemo {
 
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
-        BinaryTree.TreeNode root = binaryTree.createTestTree("ABC##DE#G##F###");
-//        binaryTree.binaryTreePrevOrder(root);
+//        BinaryTree.TreeNode root = binaryTree.createTestTree("ABC##DE#G##F###");
+        BinaryTree.TreeNode root1 = binaryTree.createTestTree("AB##C##");
+        //        binaryTree.binaryTreePrevOrder(root);
 //        System.out.println();
 //        binaryTree.binaryTreeInOrder(root);
 //        System.out.println();
@@ -25,6 +26,8 @@ public class TestDemo {
 //        binaryTree.binaryTreePostOrder(root);
 //        System.out.println();
 //        binaryTree.binaryTreePostOrderNonR(root);
-        binaryTree.binaryTreeLevelOrder(root);
+//        binaryTree.binaryTreeLevelOrder(root);
+        int i =  binaryTree.isBinaryTreeComplete(root1);
+        System.out.println(i);
     }
 }

@@ -203,28 +203,70 @@ public class BinaryTree {
 
     //二叉树的层序遍历
     //思路: 使用队列
-    void binaryTreeLevelOrder(TreeNode root){
+    void binaryTreeLevelOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
 
-        if(root != null){
+        if (root != null) {
             queue.offer(root);
 
         }
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode top = queue.peek();
-            System.out.print(top.value+" ");
-            if(top.left != null){
+            System.out.print(top.value + " ");
+            if (top.left != null) {
                 queue.offer(top.left);
             }
 
-            if(top.right != null){
+            if (top.right != null) {
                 queue.offer(top.right);
             }
             queue.poll();
         }
-
     }
 
+    //判断一颗树是不是完全二叉树
+    public int isBinaryTreeComplete(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        if(root != null){
+            queue.offer(root);
+        }
+
+        //错误写法: 因为把null放进了队列,他也算队中的一个元素.所以队中总是不为空的
+        //而我们需要判断的是队列中此时还有除过null的其他有值的元素,这才是我们要的真正的
+        //队列不为空
+//        while(!queue.isEmpty()){
+//            TreeNode top = queue.poll();
+//            if(top != null){
+//                queue.offer(top.left);
+//                queue.offer(top.right);
+//            }
+//
+//            if(top == null && !queue.isEmpty()){
+//                return -1;
+//            }
+//        }
+
+        while(!queue.isEmpty()){
+            TreeNode top = queue.poll();
+            if(top!= null){
+                queue.offer(top.left);
+                queue.offer(top.right);
+            }else{
+                break;
+            }
+        }
+
+        while(!queue.isEmpty()){
+            TreeNode cur = queue.peek();
+            if(cur!= null){
+                return -1;
+            }else{
+                queue.poll();
+            }
+        }
+
+        return 0;
+    }
 
 }
