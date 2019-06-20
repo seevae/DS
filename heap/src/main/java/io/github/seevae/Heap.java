@@ -2,6 +2,8 @@ package io.github.seevae;/*
     name zhang;
     */
 
+import java.util.Arrays;
+
 public class Heap implements IHeap {
 
     private int[] elem;
@@ -53,20 +55,59 @@ public class Heap implements IHeap {
 
     }
 
-    public void AdjustUp(int child, int len) {
+    public void AdjustUp(int num) {
+        int child = num;
+        int parent = (child-1)/2;
+        while(child > 0){
+            if(elem[child] > elem[parent]){
+                int temp= elem[child];
+                elem[child] = elem[parent];
+                elem[parent] = temp;
+                child = parent;
+                parent = (child-1)/2;
+            }else{
+                break;
+            }
+        }
+    }
 
+    public boolean isFull(){
+        return this.usedSize == this.elem.length;
     }
 
     public void pushHeap(int item) {
-
+        if(isFull()){
+            this.elem = Arrays.copyOf(this.elem,2*this.elem.length);
+        }
+        this.elem[usedSize] = item;
+        this.usedSize++;
+        AdjustUp(this.usedSize-1);
     }
 
+    public boolean isEmpty(){
+        return this.usedSize == 0;
+    }
+
+    //返回删除元素
     public int popHeap() {
-        return 0;
+        if(isEmpty()){
+            throw new UnsupportedOperationException("堆为空");
+        }
+        int oldDate = elem[0];
+        int temp = elem[0];
+        elem[0] = elem[this.usedSize-1];
+        elem[usedSize-1] = temp;
+        this.usedSize--;
+        AdjustDown(0,this.usedSize);
+        return oldDate;
     }
 
+    //得到堆顶元素但不删除
     public int getHeapTop() {
-        return 0;
+        if(isEmpty()){
+            throw new UnsupportedOperationException("堆为空");
+        }
+        return elem[0];
     }
 
     public void HeapSort() {
