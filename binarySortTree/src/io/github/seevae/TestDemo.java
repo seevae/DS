@@ -9,5 +9,7 @@ public class TestDemo {
         int arr[] = {4,5,7,8,9,6,2,1,3};
         binarySortTree.creatTree(arr);
         binarySortTree.inOrder();
+        System.out.println("--------------");
+        binarySortTree.firstOrder();
     }
 }
